@@ -8,8 +8,6 @@ This project applies data analysis and machine learning techniques to **predict 
 
 - `wine_analysis.ipynb`: Main Jupyter Notebook with data exploration, preprocessing, model training, and evaluation.
 - `/images`: Folder containing generated plots and visualizations.
-- `dataset.csv`: Original dataset used in the project (optional).
-- `requirements.txt`: List of Python dependencies.
 
 ---
 
@@ -44,7 +42,7 @@ The notebook includes:
 
 Example of correlation heatmap:
 
-![Correlation Heatmap](./images/correlation_heatmap.png)
+![Correlation Heatmap](./images/Correlation_Matrix.png)
 
 ---
 
@@ -60,7 +58,7 @@ We trained a classification model to predict wine quality. The steps include:
 
 Example confusion matrix:
 
-![Confusion Matrix](./images/confusion_matrix.png)
+![Confusion Matrix](./images/ConfusionMatrix_LogReg_lbfgs.png)
 
 ---
 
