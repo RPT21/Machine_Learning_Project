@@ -40,7 +40,7 @@ The notebook includes:
 - **Exploratory Data Analysis (EDA)** using histograms, box plots, and correlation heatmaps  
 - **Feature selection** based on correlation and distribution  
 
-Example of correlation heatmap:
+Correlation heatmap:
 
 ![Correlation Heatmap](./images/Correlation_Matrix.png)
 
@@ -51,30 +51,25 @@ Example of correlation heatmap:
 We trained a classification model to predict wine quality. The steps include:
 
 - Data splitting (training/test sets)
-- Feature scaling
-- Model selection (e.g., Random Forest, Logistic Regression, SVM)
-- Hyperparameter tuning
-- Performance evaluation (accuracy, confusion matrix, classification report)
-
-Example confusion matrix:
-
-![Confusion Matrix](./images/ConfusionMatrix_LogReg_lbfgs.png)
+- Feature scaling (except for Random Forest)
+- Model selection (Logistic Regression, SVC, Random Forest, Gradient Boosting)
+- Cross Validation tests
+- Hyperparameter tuning (Using GridSearchCV and RandomizedSearchCV)
+- Performance evaluation (accuracy, f1, confusion matrix)
 
 ---
 
 ## 📈 Results
 
-The final model achieved the following performance:
+Random Forest and Gradient Boosting are the models with more accuracy. The problem of this two models is that they have high overfitting. Considering low overfitting, the best model should be the SVC.
 
-- **Accuracy**: 85% (example)
-- **Precision/Recall** for each class
-- Discussion on misclassified samples and model limitations
+- **Accuracy of SVC**: 0.5885
+- **f1 of SVC**: 0.5640
+
+![Confusion Matrix SVC](./images/ConfusionMatrix_SVC.png)
+
+The Feature Importance using SHAP showed that acohol, density and volatile acidity were the most important features related with the quality of the wine.
+
+![Feature Importance using SHAP](./images/SHAP_RandomForest.png)
 
 ---
-
-## 🚀 How to Run
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/wine-quality-ml.git
-   cd wine-quality-ml
